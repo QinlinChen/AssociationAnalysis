@@ -12,8 +12,8 @@ using Itemset = std::vector<std::string>;
 class DataLoader
 {
 public:
-	virtual bool readTransaction(Itemset &retTrans) = 0;
-	virtual void rewind() = 0;
+    virtual bool readTransaction(Itemset &retTrans) = 0;
+    virtual void rewind() = 0;
 };
 
 /* ------------------------------------------- *
@@ -22,8 +22,8 @@ public:
 
 struct FreqItemsetsResult
 {
-	std::vector<Itemset> itemsets;
-	std::vector<int> supports;
+    std::vector<Itemset> itemsets;
+    std::vector<int> supports;
 };
 
 /* Find frequent itemsets and return the result in 'FreqItemsetsResult'. */
@@ -43,21 +43,21 @@ std::ostream &operator<<(std::ostream &os, const FreqItemsetsResult &result);
 
 struct AssociationRule
 {
-	Itemset antecedent;
-	Itemset consequent;
+    Itemset antecedent;
+    Itemset consequent;
 };
 
 struct AssociationResult
 {
-	std::vector<AssociationRule> rules;
-	std::vector<int> supports;
-	std::vector<double> confidences;
+    std::vector<AssociationRule> rules;
+    std::vector<int> supports;
+    std::vector<double> confidences;
 };
 
 /* Generate association rules from FreqItemsetsResult and return the
  * result in 'AssociationResult' */
 AssociationResult generateAssociationRules(FreqItemsetsResult &result,
-										   double minConfidence);
+                                           double minConfidence);
 
 /* Utilities */
 std::ostream &operator<<(std::ostream &os, const AssociationRule &rule);

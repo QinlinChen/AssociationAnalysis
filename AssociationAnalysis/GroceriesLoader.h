@@ -5,12 +5,12 @@
 class GroceriesLoader : public DataLoader
 {
 public:
-	GroceriesLoader();
-	~GroceriesLoader();
+    GroceriesLoader();
+    ~GroceriesLoader();
 
-	bool readTransaction(Itemset &transaction);
-	void rewind();
+    bool readTransaction(Itemset &transaction);
+    void rewind();
 
 private:
-	std::fstream fin;
+    std::fstream fin;
 };

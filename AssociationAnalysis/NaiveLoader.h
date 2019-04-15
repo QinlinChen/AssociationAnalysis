@@ -5,12 +5,12 @@
 class NaiveLoader : public DataLoader
 {
 public:
-	NaiveLoader();
-	~NaiveLoader();
+    NaiveLoader();
+    ~NaiveLoader();
 
-	bool readTransaction(Itemset &transaction);
-	void rewind();
+    bool readTransaction(Itemset &transaction);
+    void rewind();
 
 private:
-	std::fstream fin;
+    std::fstream fin;
 };

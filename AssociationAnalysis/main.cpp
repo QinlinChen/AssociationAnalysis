@@ -7,13 +7,13 @@ using namespace std;
 
 int main()
 {
-	GroceriesLoader loader;
-	Stopwatch timer;
+    GroceriesLoader loader;
+    Stopwatch timer;
 
-	FreqItemsetsResult freqItemsetsResult = FPGrowth(loader, 100);
-	AssociationResult result = generateAssociationRules(freqItemsetsResult, 0.5);
-	cout << "Time consumed: " << timer << endl;
+    FreqItemsetsResult freqItemsetsResult = FPGrowth(loader, 100);
+    AssociationResult result = generateAssociationRules(freqItemsetsResult, 0.5);
+    cout << "Time consumed: " << timer << endl;
 
-	cout << freqItemsetsResult << endl;
-	cout << result << endl;
+    cout << freqItemsetsResult << endl;
+    cout << result << endl;
 }
