@@ -150,12 +150,14 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NaiveLoader.cpp" />
     <ClCompile Include="Stopwatch.cpp" />
+    <ClCompile Include="UnixUsageLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AssociationAnalysis.h" />
     <ClInclude Include="GroceriesLoader.h" />
     <ClInclude Include="NaiveLoader.h" />
     <ClInclude Include="Stopwatch.h" />
+    <ClInclude Include="UnixUsageLoader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

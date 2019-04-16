@@ -135,7 +135,7 @@ ostream &operator<<(ostream &os, const Itemset &itemset)
     for (size_t i = 0; i < itemset.size(); ++i) {
         os << itemset[i];
         if (i + 1 != itemset.size())
-            cout << ", ";
+            os << ", ";
     }
     return os;
 }

@@ -3,7 +3,7 @@
 using namespace std;
 
 GroceriesLoader::GroceriesLoader()
-    : fin("dataset/GroceryStore/Groceries.csv")
+    : fin("dataset/GroceryStore/Groceries.csv", fstream::in)
 {
     if (!fin) {
         cerr << "Fail to load dataset." << endl;

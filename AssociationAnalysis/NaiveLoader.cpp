@@ -3,7 +3,7 @@
 using namespace std;
 
 NaiveLoader::NaiveLoader()
-    : fin("dataset/Naive/Naive.txt")
+    : fin("dataset/Naive/Naive.txt", fstream::in)
 {
     if (!fin) {
         cerr << "Fail to load dataset." << endl;

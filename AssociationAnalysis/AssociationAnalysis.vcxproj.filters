@@ -36,6 +36,9 @@
     <ClCompile Include="Stopwatch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="UnixUsageLoader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AssociationAnalysis.h">
@@ -48,6 +51,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Stopwatch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UnixUsageLoader.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -204,8 +204,8 @@ FPTree::~FPTree()
 void printFPTree(ostream &os, const FPTreeNode *tree, int depth)
 {
     for (int i = 0; i < depth; ++i)
-        cout << "  ";
-    cout << tree->item << "(" << tree->count << ")" << endl;
+        os << "  ";
+    os << tree->item << "(" << tree->count << ")" << endl;
     for (auto child : tree->children)
         printFPTree(os, child, depth + 1);
 }
