@@ -9,7 +9,7 @@ by the C++11 standard.
 
 ## Interfaces
 All the interfaces for association analysis are defined in `AssociationAnalysis.h`.
-There two parts:
+There are two parts:
 - DataLoader, which defines the interfaces to load data for association analysis alogrithms.
 - Association analysis alogrithms, which include `Apriori` and `FPGrowth`.
 
