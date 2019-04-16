@@ -32,6 +32,7 @@ FreqItemsetsResult FPGrowth(DataLoader &loader, int minSupport);
 
 /* Utilities */
 FreqItemsetsResult findFrequentOneItemsets(DataLoader &loader, int minSupport);
+void setAprioriPruning(bool enable);
 
 std::ostream &operator<<(std::ostream &os, const Itemset &itemset);
 std::ostream &operator<<(std::ostream &os, const std::vector<Itemset> &itemsets);

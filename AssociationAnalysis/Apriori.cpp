@@ -4,6 +4,8 @@
 #include <cassert>
 using namespace std;
 
+static bool enablePruning = true;
+
 vector<Itemset> generateCandidates(const vector<Itemset> &freqItemsets, int minSupport);
 void resultMerge(FreqItemsetsResult &target, const FreqItemsetsResult &result);
 bool isJoinable(const Itemset &itemset1, const Itemset &itemset2);
@@ -53,7 +55,7 @@ vector<Itemset> generateCandidates(const vector<Itemset> &freqItemsets, int minS
         for (auto &itemset2 : freqItemsets)
             if (isJoinable(itemset1, itemset2)) {
                 auto candidate = join(itemset1, itemset2);
-                if (!hasInfrequentSubset(candidate, freqItemsets))
+                if (!enablePruning || !hasInfrequentSubset(candidate, freqItemsets))
                     candidates.push_back(candidate);
             }
     return candidates;
@@ -155,4 +157,9 @@ ostream &operator<<(ostream &os, const FreqItemsetsResult &result)
     for (size_t i = 0; i < size; ++i)
         os << result.itemsets[i] << ": " << result.supports[i] << endl;
     return os;
+}
+
+void setAprioriPruning(bool enable)
+{
+    enablePruning = enable;
 }
