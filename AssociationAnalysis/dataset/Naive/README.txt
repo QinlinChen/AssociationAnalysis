@@ -1,0 +1,1 @@
+Naive dataset from the book 'Data Mining: Conpcepts and Techniques(3rd edition)'.
