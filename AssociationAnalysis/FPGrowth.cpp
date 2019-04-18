@@ -1,6 +1,7 @@
 #include "AssociationAnalysis.h"
 #include <unordered_map>
 #include <set>
+#include <list>
 #include <algorithm>
 #include <cassert>
 using namespace std;
