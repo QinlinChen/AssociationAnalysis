@@ -21,7 +21,8 @@ public:
 class FPTreeNode
 {
 public:
-    FPTreeNode(string item_ = "", int count_ = 0, FPTreeNode *parent_ = nullptr)
+    FPTreeNode(const string &item_ = "", int count_ = 0,
+               FPTreeNode *parent_ = nullptr)
         : item(item_), count(count_), parent(parent_) {}
 
     string item;
