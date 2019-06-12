@@ -145,7 +145,7 @@ Itemset FPTree::getAscendingFrequentItems() const
 void FPTree::constructConditionalFPTree(const string &item, int minSupport,
                                         FPTree &retTree) const
 {
-    /* Scan conditonal pattern bases and find all items that suffice minSupport */
+    /* Scan conditional pattern bases and find all items that suffice minSupport */
     unordered_map<string, int> ctr;
     for (auto node : headerTable.at(item).nodeList) {
         auto cur = node->parent;

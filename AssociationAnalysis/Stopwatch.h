@@ -9,7 +9,7 @@ public:
     Stopwatch() : start(clock()) {}
     ~Stopwatch() = default;
 
-    double elaspedTime() const { return static_cast<double>(clock() - start) / CLOCKS_PER_SEC; }
+    double elapsedTime() const { return static_cast<double>(clock() - start) / CLOCKS_PER_SEC; }
     void reset() { start = clock(); }
 
 private:

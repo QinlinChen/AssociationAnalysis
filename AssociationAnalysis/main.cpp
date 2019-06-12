@@ -40,7 +40,7 @@ void profileTime(int loop = 10, int minSupport = 100)
         Stopwatch timer;
         setAprioriPruning(false);
         apriori(loader, minSupport);
-        baselineTime += timer.elaspedTime();
+        baselineTime += timer.elapsedTime();
     }
     baselineTime /= loop;
     cout << "Avg time per loop(loop="<< loop <<"): " << baselineTime << endl;
@@ -50,7 +50,7 @@ void profileTime(int loop = 10, int minSupport = 100)
         Stopwatch timer;
         setAprioriPruning(true);
         apriori(loader, minSupport);
-        aprioriTime += timer.elaspedTime();
+        aprioriTime += timer.elapsedTime();
     }
     aprioriTime /= loop;
     cout << "Avg time per loop(loop=" << loop << "): " << aprioriTime << endl;
@@ -59,7 +59,7 @@ void profileTime(int loop = 10, int minSupport = 100)
     for (int i = 0; i < loop; ++i) {
         Stopwatch timer;
         FPGrowth(loader, minSupport);
-        FPGrowthTime += timer.elaspedTime();
+        FPGrowthTime += timer.elapsedTime();
     }
     FPGrowthTime /= loop;
     cout << "Avg time per loop(loop=" << loop << "): " << FPGrowthTime << endl;
